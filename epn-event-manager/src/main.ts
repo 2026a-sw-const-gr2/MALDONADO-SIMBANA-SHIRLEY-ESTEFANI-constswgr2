@@ -1,3 +1,17 @@
+// import { ValidationPipe } from '@nestjs/common';
+// import { NestFactory } from '@nestjs/core';
+// import { AppModule } from './app.module';
+
+// async function bootstrap() {
+//   const app = await NestFactory.create(AppModule);
+
+//   app.enableCors({
+//     origin: ['http://localhost:4000', 'http://127.0.0.1:4000'],
+//     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+//     allowedHeaders: ['Content-Type'],
+//   });
+
+
 import { ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
@@ -6,7 +20,16 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.enableCors({
-    origin: ['http://localhost:4000', 'http://127.0.0.1:4000'],
+    origin: [
+      'http://localhost:4000',
+      'http://127.0.0.1:4000',
+      'http://localhost:4001',
+      'http://127.0.0.1:4001',
+      'http://localhost:4002',
+      'http://127.0.0.1:4002',
+      'http://localhost:4003',
+      'http://127.0.0.1:4003',
+    ],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type'],
   });
